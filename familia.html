@@ -482,64 +482,38 @@ NOS VEMOS NO ANIVERSÁRIO !!!
 
 <script>
 
-setTimeout(function(){
+setTimeout(function () {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("site").classList.remove("hidden");
+}, 4000);
 
-document.getElementById("loading").style.display="none";
+const target = new Date("2026-08-08T19:30:00");
 
-document.getElementById("site").classList.remove("hidden");
+function updateCountdown() {
+  const now = new Date();
+  const diff = target - now;
 
-},4000);
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-const target =
-new Date("2026-08-08T19:30:00");
-
-function updateCountdown(){
-
-const now = new Date();
-
-const diff = target - now;
-
-const days =
-Math.floor(diff/(1000*60*60*24));
-
-const hours =
-Math.floor(
-(diff%(1000*60*60*24))
-/
-(1000*60*60)
-);
-
-const minutes =
-Math.floor(
-(diff%(1000*60*60))
-/
-(1000*60)
-);
-
-const seconds =
-Math.floor(
-(diff%(1000*60))
-/
-1000
-);
-
-document.getElementById("countdown").innerHTML =
-days+" DIAS<br>"+
-hours+" HORAS<br>"+
-minutes+" MINUTOS<br>"+
-seconds+" SEGUNDOS";
-
+  document.getElementById("countdown").innerHTML =
+    days + " DIAS<br>" +
+    hours + " HORAS<br>" +
+    minutes + " MINUTOS<br>" +
+    seconds + " SEGUNDOS";
 }
 
-setInterval(updateCountdown,1000);
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
 function copiarPix() {
   navigator.clipboard.writeText("135.819.519-67");
 
   document.getElementById("pixMsg").innerHTML =
     "✅ Chave PIX copiada para a área de transferência!";
 }
-}
-updateCountdown();
 
 </script>
 
