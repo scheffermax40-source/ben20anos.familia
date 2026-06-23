@@ -1,6 +1,3 @@
-<h1 style="color:red;position:fixed;z-index:99999;">
-SITE CARREGOU
-</h1>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -169,6 +166,25 @@ grid-template-columns:repeat(3, 1fr);
 gap:20px;
 max-width:900px;
 margin:0 auto;
+}
+.presentes{
+grid-template-columns:repeat(3,1fr);
+}
+
+@media (max-width:600px){
+
+.presentes{
+grid-template-columns:1fr;
+}
+
+.presentes .alien{
+min-height:auto;
+padding:20px;
+}
+
+.presentes .alien h3{
+font-size:22px;
+}
 }
 .alien{
 height:180px;
@@ -570,8 +586,7 @@ CENTRO DE RECURSOS DO OMNITRIX
 Caso deseje contribuir com a missão, estes itens aumentam as chances de sucesso:
 </p>
 
-<div class="aliens">
-
+<div class="aliens presentes">
 <div class="alien">
 <h3>🎮 GEEK</h3>
 <p>Artefatos raros para expandir a coleção intergaláctica do herói.</p>
