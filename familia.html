@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MISSÃO ESPECIAL: ANIVERSÁRIO DA MARIA</title>
+<title>MISSÃO ESPECIAL: ANIVERSÁRIO MARIA</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -168,8 +169,7 @@ max-width:900px;
 margin:0 auto;
 }
 .alien{
-min-height:180px;
-height:auto;
+height:180px;
 background:#1a1a1a;
 padding:20px;
 border-radius:20px;
@@ -182,7 +182,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 
-overflow:visible;
+overflow:hidden;
 }
 .alien h3{
 font-size:22px;
@@ -231,155 +231,105 @@ footer{
 padding:80px 20px;
 }
 /* =========================
-   RESPONSIVIDADE
+   RESPONSIVIDADE GERAL
 ========================= */
 
-img,
-div,
-section{
-max-width:100%;
+img, div, section {
+  max-width: 100%;
 }
 
-/* Tablet */
-@media (max-width:900px){
+/* telas médias (tablets) */
+@media (max-width: 900px) {
 
-.loading h1{
-font-size:30px;
+  .logo {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .omnitrix {
+    width: 220px;
+    height: 220px;
+  }
+
+  .bar {
+    width: 80%;
+  }
+
+  .aliens {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.logo{
-font-size:50px;
+/* celulares */
+@media (max-width: 600px) {
+
+  .logo {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .omnitrix {
+    width: 180px;
+    height: 180px;
+  }
+
+  .panel {
+    padding: 20px;
+  }
+
+  #countdown {
+    font-size: 26px;
+  }
+
+  .aliens {
+    grid-template-columns: 1fr;
+  }
+
+  .alien {
+    height: auto;
+    padding: 15px;
+  }
+
+  .btn {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    font-size: 16px;
+  }
 }
 
-.subtitle{
-font-size:22px;
-}
+/* telas muito pequenas */
+@media (max-width: 400px) {
 
-.title{
-font-size:36px;
-}
+  .logo {
+    font-size: 32px;
+  }
 
-.omnitrix{
-width:220px;
-height:220px;
-}
+  .subtitle {
+    font-size: 16px;
+  }
 
-.bar{
-width:80%;
-max-width:350px;
-}
-
-.aliens{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-/* Celulares */
-@media (max-width:600px){
-
-section{
-padding:50px 15px;
-}
-
-.loading h1{
-font-size:22px;
-padding:0 15px;
-}
-
-.logo{
-font-size:38px;
-}
-
-.subtitle{
-font-size:18px;
-line-height:1.4;
-}
-
-.title{
-font-size:28px;
-}
-
-.panel{
-padding:20px;
-}
-
-.omnitrix{
-width:180px;
-height:180px;
-}
-
-.bar{
-width:90%;
-height:25px;
-}
-
-#countdown{
-font-size:28px;
-}
-
-.aliens{
-grid-template-columns:1fr;
-}
-
-.alien{
-height:auto;
-min-height:120px;
-}
-
-.alien h3{
-font-size:20px;
-}
-
-.btn{
-display:block;
-width:100%;
-max-width:350px;
-margin:10px auto;
-font-size:16px;
-padding:15px;
-}
-
-footer h1{
-font-size:28px;
-}
-
-footer h2{
-font-size:18px;
-}
-
-}
-
-/* Celulares muito pequenos */
-@media (max-width:400px){
-
-.logo{
-font-size:30px;
-}
-
-.subtitle{
-font-size:15px;
-}
-
-.title{
-font-size:24px;
-}
-
-.omnitrix{
-width:140px;
-height:140px;
-}
-
-#countdown{
-font-size:22px;
-}
-
-.alien h3{
-font-size:18px;
-}
-
+  .omnitrix {
+    width: 150px;
+    height: 150px;
+  }
 }
 </style>
+
 </head>
 
 <body>
@@ -407,8 +357,7 @@ BEN 10
 </div>
 
 <h1 class="subtitle">
-MISSÃO ESPECIAL: ANIVERSÁRIO DA MARIA
-
+MISSÃO ESPECIAL: ANIVERSÁRIO DE MAX
 </h1>
 
 <p class="blink">
@@ -568,6 +517,8 @@ CENTRO DE RECURSOS DO OMNITRIX
 Caso deseje contribuir com a missão, estes itens aumentam as chances de sucesso:
 </p>
 
+<div class="aliens">
+
 <div class="alien">
 <h3>🎮 GEEK</h3>
 <p>Artefatos raros para expandir a coleção intergaláctica do herói.</p>
@@ -619,7 +570,7 @@ HERÓI REGISTRADO
 </h1>
 
 <h2>
-NOS VEMOS NO ANIVERSÁRIO!!!
+NOS VEMOS NO ANIVERSÁRIO DA MARIA
 </h2>
 
 </footer>
@@ -628,31 +579,54 @@ NOS VEMOS NO ANIVERSÁRIO!!!
 
 <script>
 
-setTimeout(function () {
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("site").classList.remove("hidden");
-}, 4000);
+setTimeout(function(){
 
-const target = new Date("2026-08-08T19:30:00");
+document.getElementById("loading").style.display="none";
 
-function updateCountdown() {
-  const now = new Date();
-  const diff = target - now;
+document.getElementById("site").classList.remove("hidden");
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+},4000);
 
-  document.getElementById("countdown").innerHTML =
-    days + " DIAS<br>" +
-    hours + " HORAS<br>" +
-    minutes + " MINUTOS<br>" +
-    seconds + " SEGUNDOS";
+const target =
+new Date("2026-08-08T19:30:00");
+
+function updateCountdown(){
+
+const now = new Date();
+
+const diff = target - now;
+
+const days =
+Math.floor(diff/(1000*60*60*24));
+
+const hours =
+Math.floor(
+(diff%(1000*60*60*24))
+/
+(1000*60*60)
+);
+
+const minutes =
+Math.floor(
+(diff%(1000*60*60))
+/
+(1000*60)
+);
+
+const seconds =
+Math.floor(
+(diff%(1000*60))
+/
+1000
+);
+
+document.getElementById("countdown").innerHTML =
+days+" DIAS<br>"+
+hours+" HORAS<br>"+
+minutes+" MINUTOS<br>"+
+seconds+" SEGUNDOS";
+
 }
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
 
 function copiarPix() {
   navigator.clipboard.writeText("135.819.519-67");
@@ -661,7 +635,13 @@ function copiarPix() {
     "✅ Chave PIX copiada para a área de transferência!";
 }
 
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
