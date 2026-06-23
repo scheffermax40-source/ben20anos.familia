@@ -233,7 +233,155 @@ opacity:.3;
 footer{
 padding:80px 20px;
 }
+/* =========================
+   RESPONSIVIDADE
+========================= */
 
+img,
+div,
+section{
+max-width:100%;
+}
+
+/* Tablet */
+@media (max-width:900px){
+
+.loading h1{
+font-size:30px;
+}
+
+.logo{
+font-size:50px;
+}
+
+.subtitle{
+font-size:22px;
+}
+
+.title{
+font-size:36px;
+}
+
+.omnitrix{
+width:220px;
+height:220px;
+}
+
+.bar{
+width:80%;
+max-width:350px;
+}
+
+.aliens{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Celulares */
+@media (max-width:600px){
+
+section{
+padding:50px 15px;
+}
+
+.loading h1{
+font-size:22px;
+padding:0 15px;
+}
+
+.logo{
+font-size:38px;
+}
+
+.subtitle{
+font-size:18px;
+line-height:1.4;
+}
+
+.title{
+font-size:28px;
+}
+
+.panel{
+padding:20px;
+}
+
+.omnitrix{
+width:180px;
+height:180px;
+}
+
+.bar{
+width:90%;
+height:25px;
+}
+
+#countdown{
+font-size:28px;
+}
+
+.aliens{
+grid-template-columns:1fr;
+}
+
+.alien{
+height:auto;
+min-height:120px;
+}
+
+.alien h3{
+font-size:20px;
+}
+
+.btn{
+display:block;
+width:100%;
+max-width:350px;
+margin:10px auto;
+font-size:16px;
+padding:15px;
+}
+
+footer h1{
+font-size:28px;
+}
+
+footer h2{
+font-size:18px;
+}
+
+}
+
+/* Celulares muito pequenos */
+@media (max-width:400px){
+
+.logo{
+font-size:30px;
+}
+
+.subtitle{
+font-size:15px;
+}
+
+.title{
+font-size:24px;
+}
+
+.omnitrix{
+width:140px;
+height:140px;
+}
+
+#countdown{
+font-size:22px;
+}
+
+.alien h3{
+font-size:18px;
+}
+
+}
 </style>
 </head>
 
